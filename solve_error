@@ -1,0 +1,8 @@
+version: interproscan-5.64-96.0
+本地InterProScan报错：/lib64/libm.so.6: version `GLIBC_2.27' not found (required by bin/prosite/pfscanV3)
+(1) 查看服务器linux版本: centos 7.9
+(2) 在interproscan.properties文件中增加两行代码：
+
+# Binary file locations (required for setup.py)
+binary.prosite.pfscanv3.path=${bin.directory}/prosite/centos7.9/pfscanV3
+binary.prosite.pfsearchv3.path=${bin.directory}/prosite/centos7.9/pfsearchV3
